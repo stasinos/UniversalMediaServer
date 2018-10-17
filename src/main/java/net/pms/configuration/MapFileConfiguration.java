@@ -70,7 +70,7 @@ public class MapFileConfiguration {
 			conf = null;
 
 			try {
-				conf = FileUtils.readFileToString(file);
+				conf = FileUtils.readFileToString(file,(String)null);
 			} catch (FileNotFoundException ex) {
 				LOGGER.warn("Can't read file: {}", ex.getMessage());
 				return null;
