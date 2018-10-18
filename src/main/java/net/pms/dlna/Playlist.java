@@ -56,7 +56,7 @@ public class Playlist extends VirtualFolder implements UMSUtils.IOListModes {
 		} else {
 			String data = res.write();
 			if (!StringUtils.isEmpty(data) && res.getMasterParent() != null) {
-				res1 = list.resolveCreateMethod(res.getMasterParent(), data);
+				res1 = UMSUtils.IOList.resolveCreateMethod(res.getMasterParent(), data);
 				res1.setMasterParent(res.getMasterParent());
 				res1.setMediaSubtitle(res.getMediaSubtitle());
 				res1.setResume(res.getResume());
